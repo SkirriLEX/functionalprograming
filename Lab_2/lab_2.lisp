@@ -1,0 +1,12 @@
+#!/usr/bin/sbcl --script
+()
+()
+(defun fn (n)
+    (if (> n 100)  
+        (+ (nth-value 1 (floor n 10)) (fn (floor n 10)))
+        (+ (nth-value 1 (floor n 10)) (floor n 10))
+    )
+) 
+(print (fn 142))
+()
+()
